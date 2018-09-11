@@ -13,7 +13,7 @@ puts "----------"
 puts "Enter a store name:"
 store_name = gets.chomp
 
-@newStore = Store.create(name: store_name)
+@newStore = Store.create(name: store_name, annual_revenue: 0, mens_apparel: false, womens_apparel: true)
 @newStore.errors.full_messages.each do |error|
   puts error
 end
